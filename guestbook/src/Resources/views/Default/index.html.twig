@@ -1,0 +1,15 @@
+{% extends 'GuestbookBundle:Default:base_guestbook.html.twig' %}
+
+
+{% block entry %}
+
+    {% for Entry in aEntry %}
+        <div class="entry">
+           <div style="width: 400px;">{{ Entry.text|slice(0, 100) }}...</div>
+            <div>
+                <a href="{{ path('guestbook_homepage') }}">Delete</a>
+                <a href="{{ path('guestbook_homepage') }}">Show</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,25 @@
+#top_pagination{
+    height: 80px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+#form_text{
+    margin: 2px;
+    width: 470px;
+    height: 101px;
+}
+
+#header{
+
+}
+
+#footer{
+    height: 80px;
+    margin-top: 20px;
+    border-top: 2px solid black;
+}
+
+.entry{
+    border-bottom: 1px solid #CCC;
+    padding: 5px 0 10px 5px;
+}

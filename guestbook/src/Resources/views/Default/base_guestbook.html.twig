@@ -1,0 +1,64 @@
+{% extends '::base.html.twig' %}
+{% block title 'Simple Guestbook' %}
+{% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/guestbook/css/main.css') }}">
+{% endblock %}
+    {% block body %}
+        {% block header %}
+            <div id="header">
+                <div id="top_pagination">
+                    <div style="float: left;">
+                        <H2>HEADER</H2>
+                    </div>
+                    <div class="pagination-centered" style="width: 50%; float: left;">
+                        12345678910
+                    </div>
+                    <div style="float: right;">
+                        <H2>HEADER</H2>
+                    </div>
+
+                </div>
+
+
+                <form novalidate action="{{ path('guestbook_homepage') }}" method="post" {{ form_enctype(form) }}>
+                    {{ form_errors(form) }}
+
+
+                    <div>
+                        {{ form_label(form.name) }}
+                        {{ form_errors(form.name) }}
+                        {{ form_widget(form.name) }}
+
+                        {{ form_label(form.email) }}
+                        {{ form_errors(form.email) }}
+                        {{ form_widget(form.email) }}
+
+                        <input type="submit" value="АГОНЬ" />
+                    </div>
+
+                    {{ form_row(form.text) }}
+
+
+                </form>
+            </div>
+        {% endblock %}
+
+        <div style="width:100%; height:300px; overflow:auto; border:solid 1px #069;">
+            {% block entry %}{% endblock %}
+        </div>
+        {% block footer %}
+            <div id="footer">
+                <div style="float: left;">
+                    <H2>FOOTER</H2>
+                </div>
+                <div class="pagination-centered" style="width: 50%; float: left;">
+                    12345678910
+                </div>
+                <div style="float: right;">
+                    <H2>FOOTER</H2>
+                </div>
+
+            </div>
+
+        {% endblock %}
+    {% endblock %}
